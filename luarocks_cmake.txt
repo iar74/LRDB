@@ -31,6 +31,9 @@ target_link_libraries(lrdb_server ${LUA_LIBRARIES})
 set_target_properties(lrdb_server PROPERTIES OUTPUT_NAME lrdb_server)
 set_target_properties(lrdb_server PROPERTIES PREFIX "")
 
+message( STATUS "INSTALL_LIBDIR = ${INSTALL_LIBDIR}" )
    
 set(CMAKE_INSTALL_PREFIX "")
-install(TARGETS lrdb_server ARCHIVE DESTINATION ${INSTALL_LIBDIR} LIBRARY DESTINATION ${INSTALL_LIBDIR}) 
+install(TARGETS lrdb_server 
+                ARCHIVE DESTINATION ${INSTALL_LIBDIR} 
+				LIBRARY DESTINATION ${INSTALL_LIBDIR}) 
